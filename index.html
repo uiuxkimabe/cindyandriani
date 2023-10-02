@@ -10,48 +10,59 @@
       href="https://api.fontshare.com/v2/css?f[]=switzer@300&f[]=outfit@600&display=swap"
       rel="stylesheet"
     />
+
     <!-- simplyCountdown -->
     <link rel="stylesheet" href="src/style/simplyCountdown.theme.default.css" />
     <script src="src/js/simplyCountdown.min.js"></script>
+
+    <!-- snowfall js -->
+    <link rel="stylesheet" href="./src/style/snow.css" />
+    <script src="./src/js/pure-snow.js" defer></script>
+
     <!-- 👇 css code file 👇 -->
     <link rel="stylesheet" href="./src/style/global.css" />
   </head>
   <body>
     <!-- Integrated Blank From Scratch Project -->
 
+    <!-- HERO SECTION -->
     <section id="hero">
+      <div id="snow" count="200"></div>
       <div class="container">
         <div class="row d-flex">
           <figcaption>
-            <h3>Goes to Cindy Birthday</h3>
-            <div class="countdown"></div>
-            <button id="sub">submit</button>
+            <h2>Road to The Day of Cindy</h2>
+            <div class="simply-countdown"></div>
+            <figcaption>
+              <p>Tombol akan muncul, <br> sesuai waktu yang telah ditentukan.</p>
+            </figcaption>
+            <button id="sub">Buka Pesan</button>
           </figcaption>
         </div>
       </div>
     </section>
 
+    <!-- END HERO SECTION -->
+
     <!-- 👇 javascript code file 👇 -->
     <script src="./src/js/index.js"></script>
     <script>
-      simplyCountdown(".countdown", {
+      simplyCountdown(".simply-countdown", {
         year: 2023, // required
         month: 11, // required
         day: 3, // required
         hours: 0, // Default is 0 [0-23] integer
         words: {
           //words displayed into the countdown
-          days: { singular: "hari" },
-          hours: { singular: "jam" },
-          minutes: { singular: "menit" },
-          seconds: { singular: "detik", plural: "seconds" },
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
         },
         onEnd: function () {
           const btnSub = document.getElementById("sub");
           const show = (btnSub.style.visibility = "visible");
-          const count = document.querySelector(".countdown");
-          const close = count.style.display = ' none'
-          return show, close;
+          return show;
         },
       });
     </script>

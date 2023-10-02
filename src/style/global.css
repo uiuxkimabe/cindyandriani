@@ -7,13 +7,27 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--outfit);
+}
+
+p {
+  font-family: var(--switzer);
 }
 
 :root {
   /* color */
   --basic: #fff;
   --dark: #0e0e0e;
+  --primary: rgb(255, 142, 161);
   /* font */
   --switzer: "Switzer", sans-serif;
   --outfit: "Outfit", sans-serif;
@@ -35,11 +49,32 @@ body {
   align-items: center;
 }
 
+.d-grid {
+  display: grid;
+}
+
+/* HERO */
+
 #hero {
   height: 100vh;
+  text-align: center;
+  color: var(--basic);
+  background-color: var(--dark);
+  position: relative;
+}
+
+#hero .row {
+  position: relative;
+  z-index: 1;
 }
 
 #sub {
   padding: 1em;
+  width: 300px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--dark);
+  border-radius: 5px;
+  font-weight: 700;
   visibility: hidden;
 }
