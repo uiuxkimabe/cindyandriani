@@ -1,0 +1,45 @@
+/*? global clearing */
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--outfit);
+}
+
+:root {
+  /* color */
+  --basic: #fff;
+  --dark: #0e0e0e;
+  /* font */
+  --switzer: "Switzer", sans-serif;
+  --outfit: "Outfit", sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  height: 100vh;
+}
+
+#sub {
+  padding: 1em;
+  visibility: hidden;
+}

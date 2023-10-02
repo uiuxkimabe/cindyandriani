@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Scratch Project ✨</title>
+    <!-- fonts -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@300&f[]=outfit@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="src/style/simplyCountdown.theme.default.css" />
+    <script src="src/js/simplyCountdown.min.js"></script>
+    <!-- 👇 css code file 👇 -->
+    <link rel="stylesheet" href="./src/style/global.css" />
+  </head>
+  <body>
+    <!-- Integrated Blank From Scratch Project -->
+
+    <section id="hero">
+      <div class="container">
+        <div class="row d-flex">
+          <figcaption>
+            <h3>Goes to Cindy Birthday</h3>
+            <div class="countdown"></div>
+            <button id="sub">submit</button>
+          </figcaption>
+        </div>
+      </div>
+    </section>
+
+    <!-- 👇 javascript code file 👇 -->
+    <script src="./src/js/index.js"></script>
+    <script>
+      simplyCountdown(".countdown", {
+        year: 2023, // required
+        month: 10, // required
+        day: 2, // required
+        hours: 2, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari" },
+          hours: { singular: "jam" },
+          minutes: { singular: "menit" },
+          seconds: { singular: "detik", plural: "seconds" },
+        },
+        onEnd: function () {
+          const btnSub = document.getElementById("sub");
+          const show = (btnSub.style.visibility = "visible");
+          const count = document.querySelector(".countdown");
+          const close = count.style.display = ' none'
+          return show, close;
+        },
+      });
+    </script>
+  </body>
+</html>
