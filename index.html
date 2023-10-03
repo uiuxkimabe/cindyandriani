@@ -7,7 +7,7 @@
     <title>✨ Scratch Project ✨</title>
     <!-- fonts -->
     <link
-      href="https://api.fontshare.com/v2/css?f[]=switzer@300&f[]=outfit@600&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=hind@400&f[]=poppins@600&display=swap"
       rel="stylesheet"
     />
 
@@ -16,8 +16,8 @@
     <script src="src/js/simplyCountdown.min.js"></script>
 
     <!-- snowfall js -->
-    <link rel="stylesheet" href="./src/style/snow.css" />
-    <script src="./src/js/pure-snow.js" defer></script>
+    <!-- <link rel="stylesheet" href="./src/style/snow.css" /> -->
+    <!-- <script src="./src/js/pure-snow.js" defer></script> -->
 
     <!-- 👇 css code file 👇 -->
     <link rel="stylesheet" href="./src/style/global.css" />
@@ -27,16 +27,19 @@
 
     <!-- HERO SECTION -->
     <section id="hero">
-      <div id="snow" count="200"></div>
+      <!-- <div id="snow" count="100"></div> -->
       <div class="container">
         <div class="row d-flex">
           <figcaption>
             <h2>Road to The Day of Cindy</h2>
             <div class="simply-countdown"></div>
-            <figcaption>
-              <p>Tombol akan muncul, <br> sesuai waktu yang telah ditentukan.</p>
+            <figcaption class="info">
+              <p>
+                Tombol akan muncul, <br />
+                sesuai waktu yang telah ditentukan.
+              </p>
             </figcaption>
-            <button id="sub">Buka Pesan</button>
+            <button id="confetti">Buka Pesan</button>
           </figcaption>
         </div>
       </div>
@@ -46,25 +49,11 @@
 
     <!-- 👇 javascript code file 👇 -->
     <script src="./src/js/index.js"></script>
-    <script>
-      simplyCountdown(".simply-countdown", {
-        year: 2023, // required
-        month: 11, // required
-        day: 3, // required
-        hours: 0, // Default is 0 [0-23] integer
-        words: {
-          //words displayed into the countdown
-          days: { singular: "hari", plural: "hari" },
-          hours: { singular: "jam", plural: "jam" },
-          minutes: { singular: "menit", plural: "menit" },
-          seconds: { singular: "detik", plural: "detik" },
-        },
-        onEnd: function () {
-          const btnSub = document.getElementById("sub");
-          const show = (btnSub.style.visibility = "visible");
-          return show;
-        },
-      });
-    </script>
+    <script src="./src/js/countdown.js"></script>
+
+    <!-- partial -->
+    <script src="https://confettijs.org/confetti.min.js"></script>
+    <!-- <script src="https://circletype.min.js"></script> -->
+    <script type="module" src="./src/js/sparkle.js"></script>
   </body>
 </html>
