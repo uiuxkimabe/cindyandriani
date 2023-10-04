@@ -59,7 +59,8 @@ p {
   height: 100vh;
   text-align: center;
   color: var(--basic);
-  background: url(../assets/endless-constellation.svg);
+  background: url(../assets/endless-constellation.svg), no-repeat;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -69,15 +70,18 @@ p {
 }
 
 #confetti {
+  display: block;
   padding: 1em;
   width: 300px;
   border: none;
+  text-decoration: none;
+  font-family: var(--hind);
   background-color: var(--basic);
   color: var(--dark);
   border-radius: 5px;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-top: 10px;
+  margin: 10px auto;
   visibility: hidden;
   transition: 0.3 ease-in-out 0.5s;
 }
@@ -85,6 +89,17 @@ p {
 #confetti:active {
   transform: scale(0.9);
 }
+
+/* END HERO */
+
+/* MESSAGE */
+
+#message {
+  height: 0;
+  overflow: hidden;
+}
+
+/* END MESSAGE */
 
 /* media query */
 /* monitor view */
