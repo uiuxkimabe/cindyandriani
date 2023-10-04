@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
   scroll-behavior: smooth;
 }
 
@@ -97,8 +98,19 @@ p {
 #message {
   height: 0;
   overflow: hidden;
-  background: url(../assets/wavey-fingerprint.svg), no-repeat;
+  /* background: url(../assets/wavey-fingerprint.svg), no-repeat; */
+  text-align: center;
 }
+
+#message figcaption {
+  width: 100%;
+}
+
+#message figcaption ul {
+  gap: 5px;
+}
+
+
 
 /* END MESSAGE */
 
