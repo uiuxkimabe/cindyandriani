@@ -97,6 +97,7 @@ p {
 #message {
   height: 0;
   overflow: hidden;
+  background: url(../assets/wavey-fingerprint.svg), no-repeat;
 }
 
 /* END MESSAGE */
