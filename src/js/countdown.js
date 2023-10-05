@@ -25,3 +25,33 @@ simplyCountdown(".simply-countdown", {
     //  return show;
   },
 });
+
+// ANIMATE FILE SVG
+const pathSvg = document.querySelectorAll("svg path");
+const contentList = document.querySelectorAll("#message figcaption ul li");
+// Ketika Button Buka Pesan Di Klik Maka Pindah Section dan Hilangkan Section Hero
+const sectionHero = document.getElementById("hero");
+btnSub.addEventListener("click", () => {
+  setTimeout(() => {
+    contentList.forEach(list => {
+      list.classList.add('fadeUp')
+    });
+  }, 1000);
+  setTimeout(() => {
+    pathSvg.forEach((element) => {
+      element.classList.add("animate");
+      fillerTrip();
+    });
+  }, 3000);
+});
+
+// FILL WARNA BERUBAH SETELAH ANIMASI GARIS SELESAI
+function fillerTrip() {
+  setTimeout(() => {
+    pathSvg.forEach((element) => {
+      element.style.fill = "black";
+      element.style.transition = "transform .5s ease-in-out";
+      sectionHero.style.height = 0;
+    });
+  }, 7000);
+}
