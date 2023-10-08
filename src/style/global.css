@@ -104,8 +104,13 @@ p {
   text-align: center;
 }
 
+#message .row {
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
 #message figcaption {
-  width: 100%;
+  flex: 0 0 100%;
 }
 
 .main-content {
@@ -125,15 +130,15 @@ p {
 }
 
 #message figcaption ul li:first-child.fadeUp {
-  animation: fadeList 0.5s ease-in-out forwards;
+  animation: fadeList 1s ease-in-out forwards;
 }
 
 #message figcaption ul li:nth-child(2).fadeUp {
-  animation: fadeList 0.5s ease-in-out 0.1s forwards;
+  animation: fadeList 1s ease-in-out 0.5s forwards;
 }
 
 #message figcaption ul li:last-child.fadeUp {
-  animation: fadeList 0.5s ease-in-out 0.2s forwards;
+  animation: fadeList 1s ease-in-out 1s forwards;
 }
 
 /* C */
