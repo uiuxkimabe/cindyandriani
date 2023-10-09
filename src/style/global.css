@@ -294,6 +294,14 @@ p {
   border-radius: 50%;
   border: none;
   color: var(--basic);
+  transition: 0.3s ease-in-out;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+#nextBtn.showUp {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* END MESSAGE */

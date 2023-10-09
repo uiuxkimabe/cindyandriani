@@ -5,9 +5,9 @@ const msg = document.getElementById("message");
 simplyCountdown(".simply-countdown", {
   year: 2023, // required
   month: 10, // required
-  day: 4, // required
-  hours: 8, // Default is 0 [0-23] integer
-  minutes: 19, //  Default is 0 [0-59] integer
+  day: 10, // required
+  hours: 1, // Default is 0 [0-23] integer
+  minutes: 16, //  Default is 0 [0-59] integer
   words: {
     //words displayed into the countdown
     days: { singular: "hari", plural: "hari" },
@@ -29,12 +29,13 @@ simplyCountdown(".simply-countdown", {
 // ANIMATE FILE SVG
 const pathSvg = document.querySelectorAll("svg path");
 const contentList = document.querySelectorAll("#message figcaption ul li");
-// Ketika Button Buka Pesan Di Klik Maka Pindah Section dan Hilangkan Section Hero
+const nextBtn = document.getElementById("nextBtn");
+
 const sectionHero = document.getElementById("hero");
 btnSub.addEventListener("click", () => {
   setTimeout(() => {
-    contentList.forEach(list => {
-      list.classList.add('fadeUp')
+    contentList.forEach((list) => {
+      list.classList.add("fadeUp");
     });
   }, 1000);
   setTimeout(() => {
@@ -51,7 +52,9 @@ function fillerTrip() {
     pathSvg.forEach((element) => {
       element.style.fill = "black";
       element.style.transition = "transform .5s ease-in-out";
-      sectionHero.style.height = 0;
     });
   }, 7000);
+  setTimeout(() => {
+    nextBtn.classList.add("showUp");
+  }, 8000);
 }
