@@ -111,6 +111,8 @@ p {
 
 #message figcaption {
   flex: 0 0 100%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .main-content {
@@ -282,6 +284,10 @@ p {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+#message .spell {
+  display: none;
 }
 
 #nextBtn {

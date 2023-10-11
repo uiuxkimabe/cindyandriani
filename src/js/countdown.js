@@ -30,6 +30,8 @@ simplyCountdown(".simply-countdown", {
 const pathSvg = document.querySelectorAll("svg path");
 const contentList = document.querySelectorAll("#message figcaption ul li");
 const nextBtn = document.getElementById("nextBtn");
+const bornDate = document.querySelectorAll(".born-date ul li h2");
+const spell = document.querySelector(".spell");
 
 const sectionHero = document.getElementById("hero");
 btnSub.addEventListener("click", () => {
@@ -57,4 +59,12 @@ function fillerTrip() {
   setTimeout(() => {
     nextBtn.classList.add("showUp");
   }, 8000);
+  setTimeout(() => {
+    spell.style.display = "block";
+  }, 8000);
+  setTimeout(() => {
+    bornDate.forEach((element) => {
+      element.style.display = "none";
+    });
+  }, 8500);
 }
