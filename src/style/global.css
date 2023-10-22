@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Sacramento&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 
 html,
 body {
-  font-family: var(--clash);
+  font-family: sans-serif;
 }
 
 @font-face {
@@ -20,8 +22,8 @@ body {
 :root {
   /* font */
   --techno: techno; /* font jam */
-  --archivo: "Archivo", sans-serif; /* untuk font paragraf */
-  --clash: "Clash Display", sans-serif; /* untuk font heading */
+  --poppins: "Poppins", sans-serif; /* untuk font paragraf */
+  --sacramento: "Sacramento", cursive; /* untuk font heading */
 
   /* color */
   --basic: #fff;
@@ -38,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--archivo);
+  font-family: var(--poppins);
 }
 
 .container {
@@ -72,6 +74,38 @@ h6 {
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+.start-fu {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.start-fu:first-child {
+  animation: startFu 0.5s ease-in-out 0.5s forwards;
+}
+
+.start-fu:nth-child(2) {
+  animation: startFu 0.5s ease-in-out 0.6s forwards;
+}
+
+.start-fu:nth-child(3) {
+  animation: startFu 0.5s ease-in-out 0.7s forwards;
+}
+
+.start-fu:nth-child(4) {
+  animation: startFu 0.5s ease-in-out 0.8s forwards;
+}
+
+.start-fu:last-child {
+  animation: startFu 0.5s ease-in-out 0.9s forwards;
+}
+
+@keyframes startFu {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #hero video {
   width: 100%;
   height: 100%;
@@ -88,10 +122,17 @@ h6 {
   z-index: 1;
 }
 
+#hero h1 {
+  font-family: var(--sacramento);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
 #hero button {
   padding: 1em 2em;
   border: none;
-  background-color: #155297;
+  background-color: var(--general);
   color: var(--basic);
   font-weight: 600;
   border-radius: 10px;
@@ -101,80 +142,38 @@ h6 {
   background-color: var(--primary);
 }
 
-/* SVG */
-
-#hero svg path:nth-child(2) {
-  stroke-dashoffset: 523;
-  stroke-dasharray: 523;
-  animation: textAnimate 3s ease-in-out infinite alternate;
+/* media query */
+/* laptop view */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
 }
 
-#hero svg path:nth-child(3) {
-  stroke-dashoffset: 140;
-  stroke-dasharray: 140;
-  animation: textAnimate 3s ease-in-out 0.1s infinite alternate;
+/* tablet view */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown > .simply-section {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    margin: 8px;
+  }
 }
 
-#hero svg path:nth-child(4) {
-  stroke-dashoffset: 210;
-  stroke-dasharray: 210;
-  animation: textAnimate 3s ease-in-out 0.2s infinite alternate;
-}
+/* smartphone view */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
 
-#hero svg path:nth-child(5) {
-  stroke-dashoffset: 346;
-  stroke-dasharray: 346;
-  animation: textAnimate 3s ease-in-out 0.3s infinite alternate;
-}
-
-#hero svg path:nth-child(6) {
-  stroke-dashoffset: 318;
-  stroke-dasharray: 318;
-  animation: textAnimate 3s ease-in-out 0.4s infinite alternate;
-}
-
-#hero svg path:nth-child(7) {
-  stroke-dashoffset: 575;
-  stroke-dasharray: 575;
-}
-
-#hero svg path:nth-child(8) {
-  stroke-dashoffset: 210;
-  stroke-dasharray: 210;
-}
-
-#hero svg path:nth-child(9) {
-  stroke-dashoffset: 346;
-  stroke-dasharray: 346;
-}
-
-#hero svg path:nth-child(10) {
-  stroke-dashoffset: 154;
-  stroke-dasharray: 154;
-}
-
-#hero svg path:nth-child(11) {
-  stroke-dashoffset: 140;
-  stroke-dasharray: 140;
-}
-
-#hero svg path:nth-child(12) {
-  stroke-dashoffset: 169;
-  stroke-dasharray: 169;
-}
-
-#hero svg path:nth-child(13) {
-  stroke-dashoffset: 210;
-  stroke-dasharray: 210;
-}
-
-#hero svg path:nth-child(14) {
-  stroke-dashoffset: 140;
-  stroke-dasharray: 140;
-}
-
-@keyframes textAnimate {
-  to {
-    stroke-dashoffset: 0;
+  .simply-countdown > .simply-section {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
   }
 }
