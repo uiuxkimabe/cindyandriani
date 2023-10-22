@@ -1,14 +1,35 @@
-/*? global clearing */
-@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@100;200;300;400;500;600&display=swap");
-
-*,
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  text-decoration: none;
   box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: var(--clash);
+}
+
+@font-face {
+  font-family: techno;
+  src: url(../fonts/font-technology/Technology-Bold.ttf);
+}
+
+:root {
+  /* font */
+  --techno: techno; /* font jam */
+  --archivo: "Archivo", sans-serif; /* untuk font paragraf */
+  --clash: "Clash Display", sans-serif; /* untuk font heading */
+
+  /* color */
+  --basic: #fff;
+  --dark: #37353a;
+  --general: #d4dae7;
+  --primary: #3aaec4;
+  --secondary: #7cbed5;
+  --ternary: #626977;
 }
 
 h1,
@@ -17,36 +38,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--poppins);
-}
-
-p {
-  font-family: var(--hind);
-}
-
-:root {
-  /* color */
-  --basic: #fff;
-  --dark: #0e0e0e;
-  --primary: rgb(255, 142, 161);
-  /* font */
-  --hind: "Hind", sans-serif;
-  --poppins: "Poppins", sans-serif;
+  font-family: var(--archivo);
 }
 
 .container {
-  margin: auto;
   width: 90%;
   height: 100%;
+  margin: auto;
 }
 
 .row {
+  width: 100%;
   height: 100%;
 }
 
 .d-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -54,304 +62,119 @@ p {
   display: grid;
 }
 
-/* HERO */
-
+/* HERO SECTION */
 #hero {
   height: 100vh;
-  text-align: center;
+  background-color: lightblue;
   color: var(--basic);
-  background: url(../assets/endless-constellation.svg), no-repeat;
-  background-attachment: fixed;
   position: relative;
-  transition: 0.3s ease-in-out;
   overflow: hidden;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+#hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #hero .row {
+  justify-content: center;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
-#confetti {
-  display: block;
-  padding: 1em;
-  width: 300px;
+#hero button {
+  padding: 1em 2em;
   border: none;
-  text-decoration: none;
-  font-family: var(--hind);
-  background-color: var(--basic);
-  color: var(--dark);
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin: 10px auto;
-  visibility: hidden;
-  transition: 0.3 ease-in-out 0.5s;
+  background-color: #155297;
+  color: var(--basic);
+  font-weight: 600;
+  border-radius: 10px;
 }
 
-#confetti:active {
-  transform: scale(0.9);
+#hero button:active {
+  background-color: var(--primary);
 }
 
-/* END HERO */
+/* SVG */
 
-/* MESSAGE */
-
-#message {
-  height: 0;
-  overflow: hidden;
-  /* background: url(../assets/wavey-fingerprint.svg), no-repeat; */
-  text-align: center;
+#hero svg path:nth-child(2) {
+  stroke-dashoffset: 523;
+  stroke-dasharray: 523;
+  animation: textAnimate 3s ease-in-out infinite alternate;
 }
 
-#message .row {
-  overflow: hidden;
-  justify-content: flex-start;
-}
-
-#message figcaption {
-  flex: 0 0 100%;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.main-content {
-  flex-direction: column;
-  align-items: center;
-}
-
-#message figcaption ul {
-  gap: 5px;
-  margin: 10px 0;
-}
-
-#message figcaption ul li {
-  transform: translateY(-10px);
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-
-#message figcaption ul li:first-child.fadeUp {
-  animation: fadeList 1s ease-in-out forwards;
-}
-
-#message figcaption ul li:nth-child(2).fadeUp {
-  animation: fadeList 1s ease-in-out 0.5s forwards;
-}
-
-#message figcaption ul li:last-child.fadeUp {
-  animation: fadeList 1s ease-in-out 1s forwards;
-}
-
-/* C */
-#message svg path:nth-child(2) {
-  stroke-dashoffset: 575;
-  stroke-dasharray: 575;
-}
-
-#message svg path:nth-child(2).animate {
-  animation: textAnimate 5s ease-in-out forwards alternate;
-}
-
-/* I */
-#message svg path:nth-child(3) {
+#hero svg path:nth-child(3) {
   stroke-dashoffset: 140;
   stroke-dasharray: 140;
+  animation: textAnimate 3s ease-in-out 0.1s infinite alternate;
 }
 
-#message svg path:nth-child(3).animate {
-  animation: textAnimate 5s ease-in-out 1s forwards alternate;
-}
-
-/* N */
-#message svg path:nth-child(4) {
+#hero svg path:nth-child(4) {
   stroke-dashoffset: 210;
   stroke-dasharray: 210;
+  animation: textAnimate 3s ease-in-out 0.2s infinite alternate;
 }
 
-#message svg path:nth-child(4).animate {
-  animation: textAnimate 5s ease-in-out 1.1s forwards alternate;
+#hero svg path:nth-child(5) {
+  stroke-dashoffset: 346;
+  stroke-dasharray: 346;
+  animation: textAnimate 3s ease-in-out 0.3s infinite alternate;
 }
 
-/* D */
-#message svg path:nth-child(5) {
-  stroke-dashoffset: 347;
-  stroke-dasharray: 347;
-}
-
-#message svg path:nth-child(5).animate {
-  animation: textAnimate 5s ease-in-out 1.2s forwards alternate;
-}
-
-/* Y */
-#message svg path:nth-child(6) {
+#hero svg path:nth-child(6) {
   stroke-dashoffset: 318;
   stroke-dasharray: 318;
+  animation: textAnimate 3s ease-in-out 0.4s infinite alternate;
 }
 
-#message svg path:nth-child(6).animate {
-  animation: textAnimate 5s ease-in-out 1.3s forwards alternate;
-}
-
-/* A */
-#message svg path:nth-child(7) {
+#hero svg path:nth-child(7) {
   stroke-dashoffset: 575;
   stroke-dasharray: 575;
 }
 
-#message svg path:nth-child(7).animate {
-  animation: textAnimate 5s ease-in-out 1.4s forwards alternate;
-}
-
-/* N */
-#message svg path:nth-child(8) {
+#hero svg path:nth-child(8) {
   stroke-dashoffset: 210;
   stroke-dasharray: 210;
 }
 
-#message svg path:nth-child(8).animate {
-  animation: textAnimate 5s ease-in-out 1.5s forwards alternate;
+#hero svg path:nth-child(9) {
+  stroke-dashoffset: 346;
+  stroke-dasharray: 346;
 }
 
-/* D */
-#message svg path:nth-child(9) {
-  stroke-dashoffset: 347;
-  stroke-dasharray: 347;
+#hero svg path:nth-child(10) {
+  stroke-dashoffset: 154;
+  stroke-dasharray: 154;
 }
 
-#message svg path:nth-child(9).animate {
-  animation: textAnimate 5s ease-in-out 1.6s forwards alternate;
-}
-
-/* R */
-#message svg path:nth-child(10) {
-  stroke-dashoffset: 155;
-  stroke-dasharray: 155;
-}
-
-#message svg path:nth-child(10).animate {
-  animation: textAnimate 5s ease-in-out 1.7s forwards alternate;
-}
-
-/* I */
-#message svg path:nth-child(11) {
+#hero svg path:nth-child(11) {
   stroke-dashoffset: 140;
   stroke-dasharray: 140;
 }
 
-#message svg path:nth-child(11).animate {
-  animation: textAnimate 5s ease-in-out 1.8s forwards alternate;
-}
-
-/* A */
-#message svg path:nth-child(12) {
+#hero svg path:nth-child(12) {
   stroke-dashoffset: 169;
   stroke-dasharray: 169;
 }
 
-#message svg path:nth-child(12).animate {
-  animation: textAnimate 5s ease-in-out 1.9s forwards alternate;
-}
-
-/* N */
-#message svg path:nth-child(13) {
+#hero svg path:nth-child(13) {
   stroke-dashoffset: 210;
   stroke-dasharray: 210;
 }
 
-#message svg path:nth-child(13).animate {
-  animation: textAnimate 5s ease-in-out 2s forwards alternate;
-}
-
-/* I */
-#message svg path:nth-child(14) {
+#hero svg path:nth-child(14) {
   stroke-dashoffset: 140;
   stroke-dasharray: 140;
-}
-
-#message svg path:nth-child(14).animate {
-  animation: textAnimate 5s ease-in-out 2.1s forwards alternate;
 }
 
 @keyframes textAnimate {
   to {
     stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fadeList {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-#message .spell {
-  display: none;
-}
-
-#nextBtn {
-  width: 50px;
-  height: 50px;
-  background-color: var(--dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: none;
-  color: var(--basic);
-  transition: 0.3s ease-in-out;
-  transform: translateY(-10px);
-  opacity: 0;
-}
-
-#nextBtn.showUp {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* END MESSAGE */
-
-/* media query */
-/* monitor view */
-@media (max-width: 992px) {
-  html {
-    font-size: 75%;
-  }
-
-  .simply-countdown > .simply-section {
-    padding: 70px;
-  }
-}
-
-/* tablet view */
-@media (max-width: 768px) {
-  html {
-    font-size: 65%;
-  }
-
-  .simply-countdown > .simply-section {
-    padding: 60px;
-    margin: 5px;
-  }
-
-  #animateText {
-    width: 400px;
-  }
-}
-
-/* smartphone view */
-@media (max-width: 576px) {
-  html {
-    font-size: 60%;
-  }
-
-  .simply-countdown > .simply-section {
-    padding: 40px;
-    margin: 3px;
-  }
-
-  #animateText {
-    width: 300px;
   }
 }

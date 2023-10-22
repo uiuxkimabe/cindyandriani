@@ -1,23 +1,29 @@
+@font-face {
+  font-family: techno;
+  src: url(../fonts/font-technology/Technology-Bold.ttf);
+}
+
 .simply-countdown {
   overflow: hidden;
   display: table;
-  font-family: "Arial", sans-serif;
+  font-family: techno;
   margin: 10px auto;
 }
 .simply-countdown > .simply-section {
-  width: 50px;
-  height: 50px;
-  padding: 60px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  /* border-radius: 50%; */
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   margin: 10px;
   font-weight: 700;
-  background: var(--basic);
-  color: var(--dark);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* background: var(--dark); */
+  color: var(--basic);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
 }
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
@@ -26,5 +32,5 @@
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 1.5rem;
+  font-size: 5rem;
 }
