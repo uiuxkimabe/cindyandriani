@@ -23,6 +23,9 @@
   <body>
     <!-- SECTION HERO -->
     <section id="hero">
+      <audio>
+        <source src="./src/assets/audio/penjaga hati.mp3" type="audio/mp3" />
+      </audio>
       <video autoplay muted loop>
         <source src="./src/assets/video/sky.mp4" type="video/mp4" />
       </video>
@@ -33,14 +36,35 @@
             <h1 class="start-fu">Cindy Andriani</h1>
             <p class="start-fu">Tombol akan aktif dalam waktu berikut</p>
             <div class="simply-countdown start-fu"></div>
-            <button type="button" class="start-fu" id="opensesame" disabled>
+            <a href="#message" class="start-fu" id="opensesame" disabled>
               Lihat Bu Lurah
-            </button>
+            </a>
           </figcaption>
         </div>
       </div>
     </section>
     <!-- END SECTION HERO -->
+
+    <!-- SECTION MESSAGE -->
+    <section id="message">
+      <video autoplay muted loop>
+        <source src="./src/assets/video/progress.mp4" type="video/mp4" />
+      </video>
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col msg d-flex">
+            <span class="unread d-flex">1</span>
+            <img src="./src/assets/cindy-3.jpeg" alt="Cindy Andriani" />
+            <figcaption>
+              <h3>Hi, Cindy</h3>
+              <p class="msg-read">Kamu punya 1 pesan belum di baca</p>
+            </figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END SECTION MESSAGE -->
 
     <!-- Javascript -->
 
