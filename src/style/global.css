@@ -11,7 +11,7 @@
 
 html,
 body {
-  font-family: sans-serif;
+  font-family: var(--poppins);
 }
 
 @font-face {
@@ -171,10 +171,6 @@ h6 {
   z-index: 1;
 }
 
-#message span {
-  font-size: 3em;
-}
-
 #message img {
   width: 80px;
   border-radius: 50%;
@@ -211,6 +207,119 @@ h6 {
   position: absolute;
   top: -10px;
   right: 10px;
+}
+
+#message .detail-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out;
+}
+
+#message .detail-msg.popUp {
+  transform: translateY(0);
+}
+
+.card-msg-detail {
+  text-align: center;
+  color: var(--ternary);
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #e7e3d6;
+  transform: translateY(20%);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card-msg-detail.popUp {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-msg-detail p {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+  line-height: 1.5em;
+}
+
+.card-msg-detail p:first-child.popUp {
+  animation: typing 3s steps(37, end) forwards;
+}
+
+.card-msg-detail p:nth-child(2).popUp {
+  animation: typing 3s steps(36, end) forwards 3.1s;
+}
+
+.card-msg-detail p:nth-child(3).popUp {
+  animation: typing 3s steps(46, end) forwards 6.1s;
+}
+
+.card-msg-detail p:nth-child(4).popUp {
+  animation: typing 3s steps(48, end) forwards 9.1s;
+}
+
+.card-msg-detail p:nth-child(5).popUp {
+  animation: typing 3s steps(35, end) forwards 12.1s;
+}
+
+.card-msg-detail p:nth-child(6).popUp {
+  animation: typing 3s steps(44, end) forwards 15.1s;
+}
+
+.card-msg-detail p:nth-child(7).popUp {
+  animation: typing 3s steps(37, end) forwards 18.1s;
+}
+
+.card-msg-detail p:nth-child(8).popUp {
+  animation: typing 3s steps(44, end) forwards 21.1s;
+}
+
+.card-msg-detail p:nth-child(9).popUp {
+  animation: typing 3s steps(37, end) forwards 24.1s;
+}
+
+.card-msg-detail p:nth-child(10).popUp {
+  animation: typing 3s steps(24, end) forwards 27.1s;
+}
+
+.card-msg-detail p:nth-child(11).popUp {
+  animation: typing 3s steps(36, end) forwards 30.1s;
+}
+
+.card-msg-detail .mark {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-msg-detail .awkward {
+  display: none;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+#close-msg {
+  display: none;
+  width: 100%;
+  padding: 1em 2em;
+  margin: 1em auto;
+  border: none;
+  background-color: var(--primary);
+  color: var(--basic);
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 /* END SECTION MESSAGE */
