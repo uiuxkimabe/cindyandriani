@@ -6,8 +6,7 @@ const read = document.querySelector("#message .msg-read");
 const audio = document.querySelector("#hero audio");
 const detailMsg = document.querySelector(".detail-msg");
 const cardMsgDtl = document.querySelector(".card-msg-detail");
-const closeMsg = document.getElementById("close-img");
-console.info(detailMsg);
+const closeMsg = document.querySelector(".close-msg");
 
 opensesame.addEventListener("click", () => {
   audio.play();
@@ -20,18 +19,20 @@ function openMsg() {
   detailMsg.classList.toggle("popUp");
   setTimeout(() => {
     cardMsgDtl.classList.add("popUp");
-  }, 1000);
+  }, 1300);
   // mark animation
   const marker = document.querySelectorAll(".mark");
   const typing = document.querySelectorAll(".card-msg-detail p");
+
   marker.forEach((element) => {
     setTimeout(() => {
       element.style.background = "yellow";
       element.style.color = "black";
-    }, 33000);
+    }, 36000);
     setTimeout(() => {
       element.style.background = "transparent";
       element.style.color = "#e7e3d6";
+      closeMsg.style.display = "block";
     }, 45000);
   });
   typing.forEach((element) => {
@@ -69,4 +70,5 @@ msg.addEventListener("click", () => {
 
 closeMsg.addEventListener("click", () => {
   detailMsg.classList.toggle("popUp");
+  console.info("oke");
 });

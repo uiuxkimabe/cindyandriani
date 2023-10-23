@@ -310,7 +310,7 @@ h6 {
   }
 }
 
-#close-msg {
+.close-msg {
   display: none;
   width: 100%;
   padding: 1em 2em;
@@ -357,5 +357,9 @@ h6 {
     height: 30px;
     padding: 5px;
     margin: 5px;
+  }
+
+  .card-msg-detail p {
+    font-size: 1.3rem;
   }
 }
