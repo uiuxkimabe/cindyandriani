@@ -72,3 +72,9 @@ closeMsg.addEventListener("click", () => {
   detailMsg.classList.toggle("popUp");
   console.info("oke");
 });
+
+// gettotal lengt line text
+const line = document.querySelectorAll(".head path");
+line.forEach(element => {
+  console.info(element.getTotalLength());
+});

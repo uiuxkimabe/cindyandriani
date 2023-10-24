@@ -24,6 +24,7 @@ body {
   --techno: techno; /* font jam */
   --poppins: "Poppins", sans-serif; /* untuk font paragraf */
   --sacramento: "Sacramento", cursive; /* untuk font heading */
+  --clash: "Clash Display", sans-serif; /* untuk clash */
 
   /* color */
   --basic: #fff;
@@ -323,6 +324,125 @@ h6 {
 }
 
 /* END SECTION MESSAGE */
+
+/* SECTION ABOUT */
+
+#about {
+  height: 100vh;
+  background-color: #0f0f0f;
+  color: var(--basic);
+  padding: 2em 0;
+  font-family: var(--clash);
+}
+
+#about svg {
+  margin: 0 auton;
+}
+
+/* C */
+#about #line path:first-child {
+  stroke-dashoffset: 163;
+  stroke-dasharray: 163;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* I */
+#about #line path:nth-child(2) {
+  stroke-dashoffset: 345;
+  stroke-dasharray: 345;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* N */
+#about #line path:nth-child(3) {
+  stroke-dashoffset: 276;
+  stroke-dasharray: 276;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* D */
+#about #line path:nth-child(4) {
+  stroke-dashoffset: 163;
+  stroke-dasharray: 163;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* Y */
+#about #line path:nth-child(5) {
+  stroke-dashoffset: 305;
+  stroke-dasharray: 305;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* A */
+#about #line path:nth-child(6) {
+  stroke-dashoffset: 298;
+  stroke-dasharray: 298;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* N */
+#about #line path:nth-child(7) {
+  stroke-dashoffset: 345;
+  stroke-dasharray: 345;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* D */
+#about #line path:nth-child(8) {
+  stroke-dashoffset: 276;
+  stroke-dasharray: 276;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* R */
+#about #line path:nth-child(9) {
+  stroke-dashoffset: 227;
+  stroke-dasharray: 227;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* I */
+#about #line path:nth-child(10) {
+  stroke-dashoffset: 345;
+  stroke-dasharray: 345;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* A */
+#about #line path:nth-child(11) {
+  stroke-dashoffset: 345;
+  stroke-dasharray: 345;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* N */
+#about #line path:nth-child(12) {
+  stroke-dashoffset: 163;
+  stroke-dasharray: 163;
+  animation: line 4s ease-in-out forwards;
+}
+
+/* I */
+#about #line path:nth-child(13) {
+  stroke-dashoffset: 345;
+  stroke-dasharray: 345;
+  animation: line 4s ease-in-out forwards;
+}
+
+@keyframes line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#about h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+/* END SECTION ABOUT */
 
 /* media query */
 /* laptop view */
