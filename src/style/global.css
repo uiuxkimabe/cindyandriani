@@ -453,6 +453,7 @@ h6 {
 #about .desc p {
   margin: 10px 0;
   text-align: justify;
+  font-family: var(--poppins);
 }
 
 @keyframes line {
@@ -480,6 +481,15 @@ h6 {
 .photo-preview {
   height: 500px;
   animation: slidePreview 10s ease-in-out infinite alternate-reverse;
+  margin: 1.5em 0;
+}
+
+.btn-ramal {
+  padding: 1em 2em;
+  margin: 1em 0;
+  background-color: var(--dark);
+  color: var(--basic);
+  border: none;
 }
 
 @keyframes slidePreview {
