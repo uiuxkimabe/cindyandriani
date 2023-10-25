@@ -347,8 +347,6 @@ h6 {
 }
 
 #about .row {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1em;
   margin: 2em 0;
 }
 
@@ -364,16 +362,14 @@ h6 {
 
 #about .head #textLogo {
   fill: transparent;
-  animation: fill 2s ease forwards 3.7s;
 }
 
 #about .head #textLogo.showUp {
-  animation: fill 2s ease forwards 3.7s;
+  animation: backText 2s ease forwards 3.7s;
 }
 
 .who.showUp {
-  transform: translateY(0);
-  opacity: 1;
+  animation: fadedown 0.5s ease forwards;
 }
 
 #about svg path:first-child {
@@ -451,7 +447,7 @@ h6 {
 #about .col {
   text-align: left;
   padding: 1em;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 #about .desc p {
@@ -465,7 +461,7 @@ h6 {
   }
 }
 
-@keyframes fill {
+@keyframes backText {
   from {
     fill: transparent;
   }
@@ -478,6 +474,68 @@ h6 {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.photo-preview {
+  height: 500px;
+  animation: slidePreview 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes slidePreview {
+  0% {
+    background: url(../assets/c-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  15% {
+    background: url(../assets/c-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  30% {
+    background: url(../assets/c-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  45% {
+    background: url(../assets/c-4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  60% {
+    background: url(../assets/c-5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  75% {
+    background: url(../assets/c-6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  80% {
+    background: url(../assets/c-8.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  90% {
+    background: url(../assets/c-9.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background: url(../assets/c-10.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 

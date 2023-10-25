@@ -8,8 +8,6 @@ const detailMsg = document.querySelector(".detail-msg");
 const cardMsgDtl = document.querySelector(".card-msg-detail");
 const closeMsg = document.querySelector(".close-msg");
 const nextStep = document.querySelector(".nextstep");
-const textLogo = document.querySelector(".head #textlogo");
-const who = document.querySelector(".who");
 
 opensesame.addEventListener("click", () => {
   audio.play();
@@ -84,8 +82,16 @@ nextStep.addEventListener("click", () => {
 
 // gettotal lengt line text
 const line = document.querySelectorAll(".head path");
+const textLogo = document.querySelector("#about .head #textLogo");
+const who = document.querySelector(".who");
 function runAnimateText() {
   line.forEach((element) => {
     element.classList.add("showUp");
   });
+  setTimeout(() => {
+    textLogo.classList.add("showUp");
+  }, 2300);
+  setTimeout(() => {
+    who.classList.add("showUp");
+  }, 4000);
 }
