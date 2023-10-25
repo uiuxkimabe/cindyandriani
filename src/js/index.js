@@ -7,6 +7,9 @@ const audio = document.querySelector("#hero audio");
 const detailMsg = document.querySelector(".detail-msg");
 const cardMsgDtl = document.querySelector(".card-msg-detail");
 const closeMsg = document.querySelector(".close-msg");
+const nextStep = document.querySelector(".nextstep");
+const textLogo = document.querySelector(".head #textlogo");
+const who = document.querySelector(".who");
 
 opensesame.addEventListener("click", () => {
   audio.play();
@@ -65,16 +68,24 @@ msg.addEventListener("click", () => {
   unread.style.display = "none";
   read.innerHTML = "Pesan telah di baca, Terima Kasih Cantik";
   read.style.color = "green";
+  nextStep.style.display = "block";
   openMsg();
 });
 
 closeMsg.addEventListener("click", () => {
   detailMsg.classList.toggle("popUp");
+  detailMsg.style.display = "none";
   console.info("oke");
+});
+
+nextStep.addEventListener("click", () => {
+  runAnimateText();
 });
 
 // gettotal lengt line text
 const line = document.querySelectorAll(".head path");
-line.forEach(element => {
-  console.info(element.getTotalLength());
-});
+function runAnimateText() {
+  line.forEach((element) => {
+    element.classList.add("showUp");
+  });
+}
