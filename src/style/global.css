@@ -339,7 +339,7 @@ h6 {
 
 #about {
   overflow: hidden;
-  background-color: #0f0f0f;
+  background-color: #181818;
   color: var(--basic);
   padding: 2em 0;
   font-family: var(--clash);
@@ -555,17 +555,61 @@ h6 {
   overflow-x: scroll;
   justify-content: flex-start;
   gap: 1em;
-  border: 1px solid white;
-  padding: 10px;
+  /* border: 1px solid white; */
+}
+
+.hasil-ramal::-webkit-scrollbar {
+  display: none;
 }
 
 .hasil-ramal .col {
-  flex: 0 0 300px;
+  flex: 0 0 250px;
   height: 100%;
   border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.hasil-ramal .head-content {
+  justify-content: space-between !important;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+}
+
+.hasil-ramal .content-tarot {
+  font-size: 0.8rem;
+  overflow-y: scroll;
+  height: 180px;
+  /* border: 1px solid white; */
+  justify-content: justify;
+}
+
+.hasil-ramal .content-tarot::-webkit-scrollbar {
+  display: none;
+}
+
+.you {
+  display: block;
+  padding: 1em 2em;
+  margin: 1em 0;
+  background-color: var(--dark);
+  color: var(--basic);
+  border: none;
 }
 
 /* END SECTION ABOUT */
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  color: var(--basic);
+  background-color: #0f0f0f;
+}
+
+/* END FOOTER */
 
 /* media query */
 /* laptop view */

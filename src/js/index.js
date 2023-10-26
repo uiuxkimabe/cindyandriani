@@ -95,3 +95,7 @@ function runAnimateText() {
     who.classList.add("showUp");
   }, 4000);
 }
+
+// Part Kuis
+const arr = [];
+
