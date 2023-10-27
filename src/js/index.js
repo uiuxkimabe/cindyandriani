@@ -97,5 +97,83 @@ function runAnimateText() {
 }
 
 // Part Kuis
-const arr = [];
+const btnRamal = document.querySelector(".btn-ramal"); //Seleksi Tombol Ramal
+const resultRamal = document.querySelector(".hasil-ramal");
+const health = document.querySelectorAll(".health-content"); //Seleksi Hasil Sehat
+const career = document.querySelectorAll(".career-content"); //Seleksi Hasil Karir
+const love = document.querySelectorAll(".love-content"); //Seleksi Hasil Pericintaan
 
+// destructuring content
+const [health1, health2, health3] = health; //desc health content
+const [career1, career2, career3] = career; //desc career content
+const [love1, love2, love3] = love; //desc love content
+
+function pilihan(health, career, love) {
+  // Section Health
+  switch (health) {
+    case "A":
+      health1.style.display = "block";
+      break;
+    case "B":
+      health2.style.display = "block";
+      break;
+    case "C":
+      health3.style.display = "block";
+      break;
+
+    default:
+      break;
+  }
+
+  // Section Career
+  switch (career) {
+    case "A":
+      career1.style.display = "block";
+      break;
+    case "B":
+      career2.style.display = "block";
+      break;
+    case "C":
+      career3.style.display = "block";
+      break;
+
+    default:
+      break;
+  }
+
+  // Section Love
+  switch (love) {
+    case "A":
+      love1.style.display = "block";
+      break;
+    case "B":
+      love2.style.display = "block";
+      break;
+    case "C":
+      love3.style.display = "block";
+      break;
+
+    default:
+      break;
+  }
+}
+
+let ask1;
+let ask2;
+let ask3;
+
+// Tampilan Hasil Ramal
+btnRamal.addEventListener("click", () => {
+  ask1 = prompt(
+    "Jika harus memilih, ingin seperti apa kamu 5/10 tahun ke depan ? \nA. Menjadi CEO \nB. Presiden \nC. Traveller \n\n*) Pilih A, B, atau C dengan huruf kapital "
+  );
+  ask2 = prompt(
+    "Ruangan mana yang jadi tempat favoritmu di rumah ? \nA. Kamar Tidur \nB. Dapur \nC. Ruang Tamu \n\n*) Pilih A, B, atau C dengan huruf kapital "
+  );
+  ask3 = prompt(
+    "Kamu ingin orang seperti apa untuk menjadi pasangan ? \nA. Pintar \nB. Good Looking  \nC. Kaya \n\n*) Pilih A, B, atau C dengan huruf kapital "
+  );
+  resultRamal.style.height = "300px";
+  btnRamal.style.display = "none";
+  pilihan(ask1, ask2, ask3);
+});

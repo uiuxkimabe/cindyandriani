@@ -450,6 +450,10 @@ h6 {
   /* border: 1px solid white; */
 }
 
+#about .desc {
+  margin-bottom: 1em;
+}
+
 #about .desc p {
   margin: 10px 0;
   text-align: justify;
@@ -482,6 +486,10 @@ h6 {
   height: 500px;
   animation: slidePreview 10s ease-in-out infinite alternate-reverse;
   margin: 1.5em 0;
+}
+
+.head-game {
+  margin: 2em 0;
 }
 
 .btn-ramal {
@@ -550,12 +558,12 @@ h6 {
 }
 
 .hasil-ramal {
-  margin-top: 1em;
-  height: 300px;
+  margin: 2em 0;
+  height: 0;
   overflow-x: scroll;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   gap: 1em;
-  /* border: 1px solid white; */
+  transition: 0.3s ease-in-out;
 }
 
 .hasil-ramal::-webkit-scrollbar {
@@ -563,7 +571,7 @@ h6 {
 }
 
 .hasil-ramal .col {
-  flex: 0 0 250px;
+  flex: 0 0 300px;
   height: 100%;
   border: 1px solid white;
   border-radius: 10px;
@@ -581,8 +589,12 @@ h6 {
   font-size: 0.8rem;
   overflow-y: scroll;
   height: 180px;
-  /* border: 1px solid white; */
+  display: none;
   justify-content: justify;
+}
+
+.hasil-ramal .content-tarot p {
+  font-family: var(--poppins);
 }
 
 .hasil-ramal .content-tarot::-webkit-scrollbar {
@@ -637,6 +649,10 @@ footer {
     gap: 1em;
     margin: 2em 0;
   }
+
+  .hasil-ramal {
+    justify-content: flex-start;
+  }
 }
 
 /* smartphone view */
@@ -654,5 +670,9 @@ footer {
 
   .card-msg-detail p {
     font-size: 1.3rem;
+  }
+
+  .content-tarot {
+    font-size: 5em;
   }
 }
