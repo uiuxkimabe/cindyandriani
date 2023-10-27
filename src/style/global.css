@@ -341,7 +341,7 @@ h6 {
   overflow: hidden;
   background-color: #181818;
   color: var(--basic);
-  padding: 2em 0;
+  padding: 2em 0 0 0;
   font-family: var(--clash);
   text-align: center;
 }
@@ -601,13 +601,19 @@ h6 {
   display: none;
 }
 
+.compile {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: 0.5s ease-in-out;
+}
+
 .you {
   display: block;
-  padding: 1em 2em;
-  margin: 1em 0;
-  background-color: var(--dark);
-  color: var(--basic);
-  border: none;
+  margin-top: 5em;
+}
+
+.compile:hover {
+  filter: grayscale(0);
 }
 
 /* END SECTION ABOUT */
