@@ -41,11 +41,9 @@
           <figcaption>
             <h4 class="start-fu">Menuju hari lahir bidadari cantik 🎉</h4>
             <h1 class="start-fu">Cindy Andriani</h1>
-            <p class="start-fu">Tombol akan aktif dalam waktu berikut</p>
+            <p class="start-fu">Tombol akan muncul setelah waktu berakhir</p>
             <div class="simply-countdown start-fu"></div>
-            <a href="#message" class="start-fu" id="opensesame" disabled>
-              Lihat Bu Lurah
-            </a>
+            <a href="#message" id="opensesame" disabled> Lihat Bu Lurah </a>
           </figcaption>
         </div>
       </div>
@@ -359,7 +357,7 @@
 
       <!-- OTHER MESSAGE -->
       <h1 data-aos="fade-right">👇👇👇 Klik Gambarnya 👇👇👇</h1>
-      <a href="#" class="you">
+      <a href="video.html" class="you">
         <img
           src="./src/assets/compilasi.png"
           alt="Cindy Andriani"
@@ -401,8 +399,10 @@
 
         onEnd: function () {
           const opensesame = document.getElementById("opensesame");
+          const message = document.getElementById("message");
           opensesame.style.background = "#0b3874";
-          opensesame.disabled = false;
+          opensesame.style.display = "block";
+          message, style, (display = "block");
           return;
         },
       });

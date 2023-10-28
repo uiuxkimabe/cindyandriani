@@ -81,6 +81,10 @@ h6 {
   opacity: 0;
 }
 
+#hero #opensesame {
+  display: none;
+}
+
 .start-fu:first-child {
   animation: startFu 0.5s ease-in-out 1s forwards;
 }
@@ -95,10 +99,6 @@ h6 {
 
 .start-fu:nth-child(4) {
   animation: startFu 0.5s ease-in-out 1.3s forwards;
-}
-
-.start-fu:last-child {
-  animation: startFu 0.5s ease-in-out 1.4s forwards;
 }
 
 @keyframes startFu {
@@ -151,6 +151,7 @@ h6 {
 
 /* SECTION MESSAGE */
 #message {
+  display: none;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -338,6 +339,7 @@ h6 {
 /* SECTION ABOUT */
 
 #about {
+  display: none;
   overflow: hidden;
   background-color: #181818;
   color: var(--basic);
@@ -621,6 +623,7 @@ h6 {
 /* FOOTER */
 
 footer {
+  display: none;
   text-align: center;
   padding: 1em 0;
   color: var(--basic);

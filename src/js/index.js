@@ -1,5 +1,7 @@
 // open sesame
 const opensesame = document.getElementById("opensesame");
+const secAbout = document.getElementById("about");
+const footer = document.getElementsByTagName('footer')[0].
 const msg = document.querySelector("#message .msg");
 const unread = document.querySelector("#message .unread");
 const read = document.querySelector("#message .msg-read");
@@ -68,6 +70,8 @@ msg.addEventListener("click", () => {
   read.style.color = "green";
   nextStep.style.display = "block";
   openMsg();
+  secAbout.style.display = "block";
+  footer.style.display = "block";
 });
 
 closeMsg.addEventListener("click", () => {
