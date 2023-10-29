@@ -151,7 +151,7 @@ h6 {
 
 /* SECTION MESSAGE */
 #message {
-  /* display: none; */
+  display: none;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -339,7 +339,7 @@ h6 {
 /* SECTION ABOUT */
 
 #about {
-  /* display: none; */
+  display: none;
   overflow: hidden;
   background-color: #181818;
   color: var(--basic);
