@@ -210,7 +210,7 @@ function pilihan(health, career, love) {
     case "A":
       career1.style.display = "block";
       break;
-    case "b":
+    case "a":
       career1.style.display = "block";
       break;
     case "B":
