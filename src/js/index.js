@@ -276,10 +276,24 @@ btnRamal.addEventListener("click", () => {
   pilihan(ask1, ask2, ask3);
 });
 
-// Video Player
-const player = document.getElementById("videoplayer");
-player.addEventListener("playing", () => {
-  if (player.requestFullscreen) player.requestFullscreen();
-  else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen();
-  else if (player.msRequestFullScreen) player.msRequestFullScreen();
-});
+//  Waiting Finish for Song
+const waitingMsg = document.querySelector(".loadMsg");
+const imgCompile = document.querySelector(".compile");
+let waitingCount = document.querySelector(".waiting");
+
+let countdownMin = Math.floor(audio.duration);
+console.info(countdownMin);
+function countMin() {
+  const myInterval = setInterval(() => {
+    waitingCount.innerHTML = Number(countdownMin);
+    console.info(countdownMin--);
+    if (countdownMin === 0) {
+      clearInterval(myInterval);
+      waitingMsg.innerHTML = "Klik Gambar";
+      waitingCount.style.display = "none";
+      imgCompile.style.display = "block";
+    }
+  }, 1000);
+}
+
+console.info(countMin());
