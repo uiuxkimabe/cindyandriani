@@ -358,7 +358,7 @@
       </div>
 
       <!-- OTHER MESSAGE -->
-      <figcaption>
+      <figcaption id="goVideo">
         <h1>
           👇👇👇 <span class="loadMsg">Mohon Tunggu Cantik </span
           ><span class="waiting">0</span> 👇👇👇
@@ -392,10 +392,10 @@
     <script>
       simplyCountdown(".simply-countdown", {
         year: 2023, // required
-        month: 11, // required
-        day: 3, // required
-        hours: 23, // Default is 0 [0-23] integer
-        minutes: 59, // Default is 0 [0-59] integer
+        month: 10, // required
+        day: 30, // required
+        hours: 0, // Default is 0 [0-23] integer
+        minutes: 25, // Default is 0 [0-59] integer
         seconds: 0, // Default is 0 [0-59] integer
         words: {
           //words displayed into the countdown
@@ -409,7 +409,7 @@
           const opensesame = document.getElementById("opensesame");
           const message = document.getElementById("message");
           opensesame.style.background = "#0b3874";
-          // opensesame.style.display = "block";
+          opensesame.style.display = "block";
           message.style.display = "block";
           return;
         },

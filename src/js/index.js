@@ -175,6 +175,7 @@ const resultRamal = document.querySelector(".hasil-ramal");
 const health = document.querySelectorAll(".health-content"); //Seleksi Hasil Sehat
 const career = document.querySelectorAll(".career-content"); //Seleksi Hasil Karir
 const love = document.querySelectorAll(".love-content"); //Seleksi Hasil Pericintaan
+const goVideo = document.getElementById("goVideo");
 
 // destructuring content
 const [health1, health2, health3] = health; //desc health content
@@ -275,6 +276,7 @@ btnRamal.addEventListener("click", () => {
   );
   resultRamal.style.height = "300px";
   btnRamal.style.display = "none";
+  goVideo.style.display = "block";
   pilihan(ask1, ask2, ask3);
 });
 

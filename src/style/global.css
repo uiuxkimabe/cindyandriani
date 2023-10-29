@@ -80,10 +80,10 @@ h6 {
   transform: translateY(-100%);
   opacity: 0;
 }
-/* 
+
 #hero #opensesame {
   display: none;
-} */
+}
 
 .start-fu:first-child {
   animation: startFu 0.5s ease-in-out 1s forwards;
@@ -151,7 +151,7 @@ h6 {
 
 /* SECTION MESSAGE */
 #message {
-  /* display: none; */
+  display: none;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -339,7 +339,7 @@ h6 {
 /* SECTION ABOUT */
 
 #about {
-  /* display: none; */
+  display: none;
   overflow: hidden;
   background-color: #181818;
   color: var(--basic);
@@ -634,6 +634,10 @@ h6 {
 
 video {
   width: 300px;
+}
+
+#goVideo {
+  display: none;
 }
 
 /* END VIDEO */
