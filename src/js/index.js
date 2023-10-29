@@ -11,8 +11,31 @@ const cardMsgDtl = document.querySelector(".card-msg-detail");
 const closeMsg = document.querySelector(".close-msg");
 const nextStep = document.querySelector(".nextstep");
 
+//  Waiting Finish for Song
+const waitingMsg = document.querySelector(".loadMsg");
+const imgCompile = document.querySelector(".compile");
+let waitingCount = document.querySelector(".waiting");
+let countdownMin = Math.floor(audio.duration);
+
+console.info(countdownMin);
+function countMin() {
+  const myInterval = setInterval(() => {
+    waitingCount.innerHTML = Number(countdownMin);
+    console.info(countdownMin--);
+    if (countdownMin === 0) {
+      clearInterval(myInterval);
+      waitingMsg.innerHTML = "Klik Gambar";
+      waitingCount.style.display = "none";
+      imgCompile.style.display = "block";
+    }
+  }, 1000);
+}
+
+console.info(countMin());
+
 opensesame.addEventListener("click", () => {
   audio.play();
+  countMin();
   setTimeout(() => {
     msg.classList.toggle("showUp");
   }, 1000);
@@ -275,25 +298,3 @@ btnRamal.addEventListener("click", () => {
   btnRamal.style.display = "none";
   pilihan(ask1, ask2, ask3);
 });
-
-//  Waiting Finish for Song
-const waitingMsg = document.querySelector(".loadMsg");
-const imgCompile = document.querySelector(".compile");
-let waitingCount = document.querySelector(".waiting");
-
-let countdownMin = Math.floor(audio.duration);
-console.info(countdownMin);
-function countMin() {
-  const myInterval = setInterval(() => {
-    waitingCount.innerHTML = Number(countdownMin);
-    console.info(countdownMin--);
-    if (countdownMin === 0) {
-      clearInterval(myInterval);
-      waitingMsg.innerHTML = "Klik Gambar";
-      waitingCount.style.display = "none";
-      imgCompile.style.display = "block";
-    }
-  }, 1000);
-}
-
-console.info(countMin());
