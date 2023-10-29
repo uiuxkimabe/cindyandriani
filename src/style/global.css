@@ -80,10 +80,10 @@ h6 {
   transform: translateY(-100%);
   opacity: 0;
 }
-
+/* 
 #hero #opensesame {
   display: none;
-}
+} */
 
 .start-fu:first-child {
   animation: startFu 0.5s ease-in-out 1s forwards;
@@ -151,7 +151,7 @@ h6 {
 
 /* SECTION MESSAGE */
 #message {
-  display: none;
+  /* display: none; */
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -339,7 +339,7 @@ h6 {
 /* SECTION ABOUT */
 
 #about {
-  display: none;
+  /* display: none; */
   overflow: hidden;
   background-color: #181818;
   color: var(--basic);
@@ -620,6 +620,23 @@ h6 {
 
 /* END SECTION ABOUT */
 
+/* VIDEO */
+
+.msg-video {
+  width: 100%;
+  height: 100vh;
+}
+
+.msg-video {
+  justify-content: center;
+}
+
+video {
+  width: 300px;
+}
+
+/* END VIDEO */
+
 /* FOOTER */
 
 footer {
@@ -683,5 +700,10 @@ footer {
 
   .content-tarot {
     font-size: 5em;
+  }
+
+  video {
+    width: 100%;
+    height: 100vh;
   }
 }

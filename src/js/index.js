@@ -1,7 +1,7 @@
 // open sesame
 const opensesame = document.getElementById("opensesame");
 const secAbout = document.getElementById("about");
-const footer = document.getElementsByTagName('footer')[0].
+const footer = document.getElementsByTagName("footer")[0];
 const msg = document.querySelector("#message .msg");
 const unread = document.querySelector("#message .unread");
 const read = document.querySelector("#message .msg-read");
@@ -77,11 +77,78 @@ msg.addEventListener("click", () => {
 closeMsg.addEventListener("click", () => {
   detailMsg.classList.toggle("popUp");
   detailMsg.style.display = "none";
-  console.info("oke");
+
+  // Firework Confetti
+  const duration = 15 * 1000,
+    animationEnd = Date.now() + duration,
+    defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  const interval = setInterval(function () {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    const particleCount = 50 * (timeLeft / duration);
+
+    // since particles fall down, start a bit higher than random
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      })
+    );
+  }, 250);
 });
 
 nextStep.addEventListener("click", () => {
   runAnimateText();
+  const duration = 15 * 1000,
+    animationEnd = Date.now() + duration;
+
+  let skew = 1;
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  (function frame() {
+    const timeLeft = animationEnd - Date.now(),
+      ticks = Math.max(200, 500 * (timeLeft / duration));
+
+    skew = Math.max(0.8, skew - 0.001);
+
+    confetti({
+      particleCount: 1,
+      startVelocity: 0,
+      ticks: ticks,
+      origin: {
+        x: Math.random(),
+        // since particles fall down, skew start toward the top
+        y: Math.random() * skew - 0.2,
+      },
+      colors: ["#ffffff"],
+      shapes: ["circle"],
+      gravity: randomInRange(0.4, 0.6),
+      scalar: randomInRange(0.4, 1),
+      drift: randomInRange(-0.4, 0.4),
+    });
+
+    if (timeLeft > 0) {
+      requestAnimationFrame(frame);
+    }
+  })();
 });
 
 // gettotal lengt line text
@@ -118,10 +185,19 @@ function pilihan(health, career, love) {
     case "A":
       health1.style.display = "block";
       break;
+    case "a":
+      health1.style.display = "block";
+      break;
     case "B":
       health2.style.display = "block";
       break;
+    case "b":
+      health2.style.display = "block";
+      break;
     case "C":
+      health3.style.display = "block";
+      break;
+    case "c":
       health3.style.display = "block";
       break;
 
@@ -134,10 +210,19 @@ function pilihan(health, career, love) {
     case "A":
       career1.style.display = "block";
       break;
+    case "b":
+      career1.style.display = "block";
+      break;
     case "B":
       career2.style.display = "block";
       break;
+    case "b":
+      career2.style.display = "block";
+      break;
     case "C":
+      career3.style.display = "block";
+      break;
+    case "c":
       career3.style.display = "block";
       break;
 
@@ -150,10 +235,19 @@ function pilihan(health, career, love) {
     case "A":
       love1.style.display = "block";
       break;
+    case "a":
+      love1.style.display = "block";
+      break;
     case "B":
       love2.style.display = "block";
       break;
+    case "b":
+      love2.style.display = "block";
+      break;
     case "C":
+      love3.style.display = "block";
+      break;
+    case "c":
       love3.style.display = "block";
       break;
 
@@ -180,4 +274,12 @@ btnRamal.addEventListener("click", () => {
   resultRamal.style.height = "300px";
   btnRamal.style.display = "none";
   pilihan(ask1, ask2, ask3);
+});
+
+// Video Player
+const player = document.getElementById("videoplayer");
+player.addEventListener("playing", () => {
+  if (player.requestFullscreen) player.requestFullscreen();
+  else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen();
+  else if (player.msRequestFullScreen) player.msRequestFullScreen();
 });

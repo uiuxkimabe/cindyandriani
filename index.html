@@ -26,6 +26,8 @@
     <script src="./src/js/simplyCountdown.min.js"></script>
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
   </head>
   <body>
     <!-- SECTION HERO -->
@@ -43,7 +45,7 @@
             <h1 class="start-fu">Cindy Andriani</h1>
             <p class="start-fu">Tombol akan muncul setelah waktu berakhir</p>
             <div class="simply-countdown start-fu"></div>
-            <a href="#message" id="opensesame" disabled> Lihat Bu Lurah </a>
+            <a href="#message" id="opensesame"> Lihat Bu Lurah </a>
           </figcaption>
         </div>
       </div>
@@ -63,7 +65,7 @@
             <figcaption>
               <h3>Hi, Cindy</h3>
               <p class="msg-read">Kamu punya 1 pesan belum di baca</p>
-              <a href="#about" class="nextstep">Lanjut Biar Hebring</a>
+              <a href="#about" class="nextstep">Lanjut Klik Ini Ya</a>
             </figcaption>
           </div>
         </div>
@@ -401,8 +403,8 @@
           const opensesame = document.getElementById("opensesame");
           const message = document.getElementById("message");
           opensesame.style.background = "#0b3874";
-          opensesame.style.display = "block";
-          message, style, (display = "block");
+          // opensesame.style.display = "block";
+          message.style.display = "block";
           return;
         },
       });
