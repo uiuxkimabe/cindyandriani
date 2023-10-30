@@ -286,7 +286,7 @@ const imgCompile = document.querySelector(".compile");
 let waitingCount = document.querySelector(".waiting");
 
 function countMin() {
-  let countdownMin = 253;
+  let countdownMin = 187;
   const myInterval = setInterval(() => {
     console.info(countdownMin--);
     waitingCount.innerHTML = Number(countdownMin);
